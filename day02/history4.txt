@@ -1,0 +1,650 @@
+    1  whoami
+    2  mkdir ~/work
+    3  cd ~/work
+    4  ssh-keygen
+    5  ssh-keygen -t ed25519
+    6  ssh-keygen
+    7  cat ~/.ssh/id_rsa.pub
+    8  clear
+    9  git config --global user.name "Bard K. Roh"
+   10  git config --global user.email bardroh@weable.ai
+   11  git config --global --list
+   12  git clone git@github.com:weable-gsc/gsc-msa-2024-2nd.git
+   13  ls
+   14  cd gsc-msa-2024-2nd/
+   15  clear
+   16  ls
+   17  cd doc
+   18  ls
+   19  cd ..
+   20  ls
+   21  cd src
+   22  ls
+   23  cd exercise/
+   24  ls
+   25  cd bardroh/
+   26  ls
+   27  cd day01/
+   28  ls
+   29  history > h1.txt
+   30  ls
+   31  git add h1.txt 
+   32  git commit
+   33  git push
+   34  ckear
+   35  clear
+   36  cd ..
+   37  cd 
+   38  clear
+   39  ls
+   40  rm -rf work
+   41  clear
+   42  ls
+   43  mkdir ~/work
+   44  cd ~/work
+   45  ssh-keygen
+   46  cat ~/.ssh/id_rsa.pub
+   47  git config --global user.name "Bard K. Roh"
+   48  git config --global user.email bardroh@weable.ai
+   49  git config --global --list
+   50  clear
+   51  git clone git@github.com:weable-gsc/gsc-msa-2024-2nd.git
+   52  cd gsc-msa-2024-2nd/
+   53  ls
+   54  cd src
+   55  ls
+   56  cd exercise/
+   57  ls
+   58  cd bardroh/
+   59  ls
+   60  cd day01/
+   61  ls
+   62  history > h2.txt
+   63  ls 
+   64  git add h2.txt 
+   65  git commit
+   66  git push
+   67  history
+   68  clear
+   69  ls
+   70  history > h3.txt
+   71  ls
+   72  clear
+   73  git add h3.txt 
+   74  git commit
+   75  git commit -m "add h3.txt"
+   76  ls
+   77  rm h3.txt
+   78  ls
+   79  git checkout h3.txt
+   80  ls
+   81  vi h3.txt 
+   82  cat h3.txt 
+   83  git checkout h3.txt
+   84  vi h3.txt 
+   85  git push
+   86  git pull
+   87  pico h3.txt 
+   88  vi h3.txt 
+   89  clear
+   90  ls
+   91  mkdir new_folder
+   92  ls
+   93  cd new_folder/
+   94  ls
+   95  history > h4.txt
+   96  vi h4.txt 
+   97  cd ..
+   98  ls
+   99  rm -rf new_folder/
+  100  clear
+  101  ls
+  102  mkdir new_folder
+  103  ls
+  104  cd new_folder/
+  105  ls
+  106  history > h4.txt
+  107  ls
+  108  git add h4.txt 
+  109  git commit 
+  110  git push
+  111  git pull
+  112  git config pull.rebase false 
+  113  git pull
+  114  git push
+  115  clear
+  116  history > h5.txt
+  117  git add h5.txt 
+  118  git commit -m 'add h5.txt'
+  119  git pull
+  120  git push
+  121  clear
+  122  cat /etc/*release*
+  123  cd
+  124  ls
+  125  cat install-docker.sh
+  126  cat install-docker.sh | more
+  127  clear
+  128  sh install-docker.sh --dry-run
+  129  sudo sh install-docker.sh
+  130  clear
+  131  docker -v
+  132  docker ps
+  133  docker -v
+  134  docker run -it centos:7
+  135  docker pull ubuntu:20.04
+  136  docker image ls
+  137  docker images
+  138  clear
+  139  docker create -i -t --name myubuntu ubuntu:20.04
+  140  docker start myubuntu
+  141  docker ps
+  142  docker attach myubuntu
+  143  docker ps
+  144  docker attach myubuntu
+  145  docker ps
+  146  docker ps 
+  147  docker ps -a
+  148  docker run -i -t ubuntu:20.04 echo hello world!
+  149  docker ps
+  150  docker ps -a
+  151  clear
+  152  docker rename myubuntu renamed
+  153  docker ps -a
+  154  docker rename renamed myubuntu
+  155  docker ps -a
+  156  docker rm myubuntu
+  157  docker ps -a
+  158  docker rm -f  bold_khorana
+  159  docker container prune
+  160  docker ps -a -q
+  161  docker ps -a 
+  162  docker ps -a -q
+  163  clear
+  164  docker rm -f $(docker ps -a -q)
+  165  docker ps -a
+  166  cd work/
+  167  ls
+  168  cd gsc-msa-2024-2nd/
+  169  ls
+  170  cd src
+  171  ls
+  172  cd exercise/
+  173  ls
+  174  cd bardroh/
+  175  ls
+  176  cd day01/
+  177  ls
+  178  history > h4.txt
+  179  git add h4.txt 
+  180  git commit -m 'add h4.txt'
+  181  git pull
+  182  git push
+  183  clear
+  184  docker ps -a
+  185  docker images
+  186  docker run -i -t --name network_test ubuntu:14.04
+  187  clear
+  188  docker ps
+  189  docker run -it --name mywebserver -p 80:80 ubuntu:14.04
+  190  clear
+  191  docker ps -a
+  192  docker rm -f $(docker ps -a -q)
+  193  docker ps -a
+  194  docker run -d --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql:5.7
+  195  docker ps
+  196  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress --link wordpressdb:mysql -p 80:80 wordpress:5.6
+  197  clear
+  198  docker ps
+  199  docker rm -f $(docker ps -a -q)
+  200  docker ps -a
+  201  history
+  202  docker run -d --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql:5.7
+  203  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress --link wordpressdb:mysql -p 80:80 wordpress:5.6
+  204  docker ps
+  205  clear
+  206  docker p
+  207  docker ps
+  208  docker rm -f $(docker ps -a -q)
+  209  docker run -d --name wordpressdb_hostvolume -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -v /home/wordpress_db:/var/lib/mysql mysql:5.7
+  210  docker logs wordpressdb_hostvolume
+  211  clear
+  212  ls
+  213  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress_hostvolume --link wordpressdb_hostvolume:mysql -p 80:80 wordpress:5.6
+  214  docker ps
+  215  docker logs wordpress_hostvolume
+  216  cklear
+  217  clear
+  218  docker ps
+  219  docker rm -f $(docker ps -a -q)
+  220  docker ps -a
+  221  ls /home/wordpress_db/
+  222  docker run -d --name wordpressdb_hostvolume -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -v /home/wordpress_db:/var/lib/mysql mysql:5.7
+  223  docker ps
+  224  docker logs wordpressdb_hostvolume
+  225  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress_hostvolume --link wordpressdb_hostvolume:mysql -p 80:80 wordpress:5.6
+  226  clear
+  227  docker ps
+  228  docker logs wordpress_hostvolume
+  229  clear
+  230  ls
+  231  history > h5.txt
+  232  vi h5.txt 
+  233  clear
+  234  ls
+  235  git add h5.txt 
+  236  git commit -m 'add h5.txt'
+  237  git pull
+  238  git push
+  239  clear
+  240  docker ps
+  241  docker rm -f $(docker ps -a -q)
+  242  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:12
+  243  docker ps
+  244  docker logs postgres
+  245  docker run -d --name drupal -e DRUPAL_DB_HOST=postgres:5432 -e DRUPAL_DB_USER=postgres -e DRUPAL_DB_PASSWORD=password -e DRUPAL_DB_NAME=drupal -p 8081:80 --link postgres:postgres -v drupal_data:/var/www/html drupal
+  246  docker ps
+  247  docker rm drupal
+  248  docker rm -f drupal
+  249  docker run -d --name drupal -e DRUPAL_DB_HOST=postgres:5432 -e DRUPAL_DB_USER=postgres -e DRUPAL_DB_PASSWORD=password -e DRUPAL_DB_NAME=drupal -p 80:80 --link postgres:postgres -v drupal_data:/var/www/html drupal
+  250  docker ps
+  251  docker logs drupal
+  252  docker rm -f $(docker ps -a -q)
+  253  clear
+  254  ls
+  255  docker volume ls
+  256  docker volume rm drupal_data
+  257  cclear
+  258  clear
+  259  ls
+  260  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:alpine
+  261  docker run -d --name drupal --link postgres:postgres -p 8080:80 -v drupal_data:/var/www/html drupal
+  262  docker ps
+  263  docker ps -a
+  264  docker rm -f $(docker ps -a -q)
+  265  clear
+  266  ls
+  267  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:alpine
+  268  docker ps
+  269  docker ps -a
+  270  docker logs postgres
+  271  docker rm -f $(docker ps -a -q)
+  272  docker volume ls
+  273  docker volume rm drupal_data
+  274  docker volume rm postgres_data
+  275  docker volume ls
+  276  clear
+  277  ls
+  278  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:alpine
+  279  docker ps
+  280  docker logs postgres
+  281  docker run -d --name drupal --link postgres:postgres -p 80:80 -v drupal_data:/var/www/html drupal
+  282  docker logs
+  283  docker ps
+  284  docker logs drupal
+  285  docker rm -f $(docker ps -a -q)
+  286  [200~docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:alpine
+  287  ~
+  288  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:alpine
+  289  docker run -d --name drupal --link postgres:postgres -p 80:80 -v drupal_data:/var/www/html drupal
+  290  docker ps
+  291  docker rm -f $(docker ps -a -q)
+  292  docker images
+  293  docker rmi drupal
+  294  docker rmi postgres:12
+  295  docker rmi postgres:alpine
+  296  clear
+  297  docker images
+  298  docker rm -f $(docker ps -a -q)
+  299  docker ps
+  300  docker ps -a
+  301  whoami
+  302  docker ps -a
+  303  docker rm -f $(docker ps -a -q)
+  304  clear
+  305  docker ps -a
+  306  docker run -d --name joomla_db -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=joomla_db -v /home/joomla_db:/var/lib/mysql mysql:5.7
+  307  docker ps
+  308  ls /home/joomla_db/
+  309  docker logs joomla_db
+  310  clear
+  311  docker run -d --name joomla -p 80:80 --link joomla_db:mysql -e JOOMLA_DB_HOST=joomla_db -e JOOMLA_DB_USER=root -e JOOMLA_DB_PASSWORD=password -e JOOMLA_DB_NAME=joomla_db -v /home/joomla_web:/var/www/html joomla:4.4
+  312  docker ps
+  313  docker logs joomla
+  314  docker ps
+  315  docker exec joomla ls /var/www/html
+  316  docker exec joomla ls -la /var/www/html
+  317  docker exec joomla ls /var/www/html
+  318  docker exec joomla ls -la /var/www/html
+  319  docker exec -it joomla /bin/bash
+  320  docker ps
+  321  docker exec -it joomla /bin/bash
+  322  docker exec joomla ls /var/www/html
+  323  docker exec joomla cat /var/www/html/configuration.php
+  324  clear
+  325  docker ps
+  326  docker rm -f $(docker ps -a -q)
+  327  docker ps -a
+  328  ls /home/joomla_db
+  329  ls /home/joomla_web/
+  330  docker run -d --name joomla_db -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=joomla_db -v /home/joomla_db:/var/lib/mysql mysql:5.7
+  331  docker ps
+  332  docker logs joomla_db
+  333  docker run -d --name joomla -p 80:80 --link joomla_db:mysql -e JOOMLA_DB_HOST=joomla_db -e JOOMLA_DB_USER=root -e JOOMLA_DB_PASSWORD=password -e JOOMLA_DB_NAME=joomla_db -v /home/joomla_web:/var/www/html joomla:4.4
+  334  docker ps
+  335  docker logs joomla
+  336  clear
+  337  cd work/
+  338  \
+  339  clear
+  340  ls
+  341  cd gsc-msa-2024-2nd/
+  342  ls
+  343  cd src
+  344  ls
+  345  git pull
+  346  clear
+  347  ls
+  348  cd exercise/
+  349  ls
+  350  cd bardroh/
+  351  ls
+  352  mkdir day02
+  353  ls
+  354  cd day02/
+  355  ls
+  356  history > h1.txt
+  357  vi joomla.txt
+  358  ls
+  359  git add h1.txt joomla.txt 
+  360  git commit
+  361  git push
+  362  clear
+  363  docker ps
+  364  docker rm -f $(docker ps -a -q)
+  365  docker run -d --name postgres-db     -e POSTGRES_DB=drupal     -e POSTGRES_USER=user     -e POSTGRES_PASSWORD=pass     -v /home/drupal_db:/var/lib/postgresql/data postgres:12
+  366  docker ps
+  367  docker logs postgres-db
+  368  docker volume create drupal-sites
+  369  docker volume ls
+  370  docker run --rm -v drupal-sites:/temporary/sites drupal:9 cp -aRT /var/www/html/sites /temporary/sites
+  371  docker ps
+  372  docker run --name my-drupal -d -p 80:80 --link postgres-db:my-db     -v drupal-modules:/var/www/html/modules     -v drupal-profiles:/var/www/html/profiles     -v drupal-sites:/var/www/html/sites     -v drupal-themes:/var/www/html/themes drupal:9
+  373  docker ps
+  374  docker logs my-drupal
+  375  clear
+  376  docker ps
+  377  docker rm -f $(docker ps -a -q)
+  378  docker run -d --name postgres-db     -e POSTGRES_DB=drupal     -e POSTGRES_USER=user     -e POSTGRES_PASSWORD=pass     -v /home/drupal_db:/var/lib/postgresql/data postgres:12
+  379  docker ps 
+  380  docker logs postgres-db
+  381  docker run --name my-drupal -d -p 80:80 --link postgres-db:my-db     -v drupal-modules:/var/www/html/modules     -v drupal-profiles:/var/www/html/profiles     -v drupal-sites:/var/www/html/sites     -v drupal-themes:/var/www/html/themes drupal:9
+  382  docker p[s
+  383  docker ps
+  384  docker logs my-drupal
+  385  vi drupal.txt
+  386  git add drupal.txt 
+  387  ls
+  388  git commit
+  389  git push
+  390  git pull
+  391  git push
+  392  clear
+  393  docker ps
+  394  docker rm -f $(docker ps -a -q)
+  395  docker volume create --name myvolume
+  396  docker volume inspect myvolume
+  397  cd /var/lib/docker
+  398  clear
+  399  ls
+  400  ls containers/
+  401  ls image
+  402  ls image/overlay2/
+  403  docker image ls
+  404  cd volumes/
+  405  ls
+  406  docker volume ls
+  407  docker run -it --name myvolume_1 -v myvolume:/root ubuntu:18.04
+  408  clear
+  409  docker ps
+  410  cd ..
+  411  ls
+  412  cd containers/
+  413  ls
+  414  cd d7875c6d1781ab15b9ab90a3fc4689016501018763512edbf81a5bf6b7cf3450/
+  415  ls
+  416  cd ..
+  417  ls
+  418  clear
+  419  ls
+  420  cd //
+  421  cd /var/lib/docker/
+  422  ls
+  423  cd volumes/
+  424  ls
+  425  docker run -it --name myvolume_2 -v myvolume:/root ubuntu:18.04
+  426  cd myvolume/
+  427  ls
+  428  cd _data/
+  429  ls
+  430  ls -la
+  431  docker volume inspect myvolume 
+  432  clear
+  433  cd
+  434  docker volume prune
+  435  docker volume ls
+  436  docker volume prune: 사
+  437  docker volume prune
+  438  clear
+  439  docker volume ls
+  440  docker ps -a
+  441  docker rm -f $(docker ps -a -q)
+  442  clear
+  443  docker run -it ubuntu:14.04 
+  444  clear
+  445  docker ps
+  446  docker run -it -d ubuntu:14.04
+  447  docker ps
+  448  ifconfig
+  449  apt install net-tools
+  450  ifconfig
+  451  docker run -it -d ubuntu:14.04
+  452  docker ps
+  453  ifconfig
+  454  clear
+  455  docker network ls
+  456  docker network inspect bridge
+  457  docker network create --driver bridge mybridge
+  458  clear
+  459  docker network ls
+  460  ifconfig
+  461  docker network create --driver bridge mybridge2
+  462  docker network ls
+  463  docker network inspect mybridge2
+  464  docker network inspect mybridge
+  465  docker network inspect bridge
+  466  clear
+  467  docker run -it -d --name mynetwork_container --net mybridge ubuntu:14.04
+  468  docker ps
+  469  docker attach mynetwork_container
+  470  docker attach lucid_matsumoto
+  471  clear
+  472  ls
+  473  docker network create --driver bridge --subnet=172.20.0.0/16 --ip-range=172.20.0.0/24 --gateway=172.20.0.1 my_custom_network
+  474  docker network ls
+  475  docker rm -f $(docker ps -a -q)
+  476  clear
+  477  docker ps -a
+  478  docker run -it --name mynetwork_container --net mybridge ubuntu:14.04
+  479  docker ps -a
+  480  docker rm -f $(docker ps -a -q)
+  481  cd work/
+  482  ls
+  483  cd gsc-msa-2024-2nd/
+  484  ls
+  485  cd src
+  486  ls
+  487  cd exercise/
+  488  clear
+  489  ls
+  490  cd bardroh/
+  491  ls
+  492  cd day02/
+  493  ls
+  494  history > h2.txt
+  495  git add h2.txt 
+  496  git commit -m 'add h2.txt'
+  497  git pull
+  498  git push
+  499  clear
+  500  docker network ls
+  501  docker run -it --name network_host --net host ubuntu:14.04
+  502  docker ps
+  503  docker ps -a
+  504  ifconfig
+  505  clear
+  506  docker run -it --name network_none --net none ubuntu:14.04
+  507  docker ps
+  508  docker ps -a
+  509  clear
+  510  docker rm -f $(docker ps -a -q)
+  511  docker ps -a
+  512  docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=password mysql:5.7
+  513  docker ps
+  514  docker logs mysql
+  515  clear
+  516  docker rm -f $(docker ps -a -q)
+  517  docker run -d --name no_password_mysql mysql:5.7
+  518  docker ps
+  519  docker ps -a
+  520  docker logs no_password_mysql
+  521  docker logs --tail 50 mysql
+  522  docker logs --tail 50 no_password_mysql
+  523  docker logs -f --tail 50 no_password_mysql
+  524  docker logs --tail 50 -f no_password_mysql
+  525  clear
+  526  docker rm -f $(docker ps -a -q)
+  527  docker ps -a
+  528  docker run -it --name logtest ubuntu:14.04
+  529  clear
+  530  docker ps -a
+  531  docker logs logtest
+  532  cd /var/lib/docker/containers
+  533  clear
+  534  ls
+  535  cd 097f137eba286a6c4cefe43ad6a9619c5af42b019176d0957eec74c077609fc2/
+  536  ls
+  537  vi 097f137eba286a6c4cefe43ad6a9619c5af42b019176d0957eec74c077609fc2-json.log 
+  538  ckear
+  539  clear
+  540  cd
+  541  docker rm -f $(docker ps -a -q)
+  542  docker search ubuntu
+  543  docker run -it --name commit_test ubuntu:14.04
+  544  docker ps
+  545  docker commit -a "bardroh" -m "my first commit" commit_test commit_test:first
+  546  docker images
+  547  docker run -it --name commit_test2 commit_test:first
+  548  docker inspect ubuntu:14.04
+  549  docker image inspect ubuntu:14.04
+  550  docker inspect commit_test:first
+  551  docker image inspect ubuntu:14.04
+  552  docker inspect commit_test:first
+  553  docker images
+  554  docker pull wordpress
+  555  docker rmi commit_test:first
+  556  docker rm -f $(docker ps -a -q)
+  557  docker rmi commit_test:first
+  558  docker images
+  559  clear
+  560  docker ps -a
+  561  docker run -it --name commit_container1 ubuntu:14.04
+  562  docker ps
+  563  docker commit commit_container1 my-image-name:0.0
+  564  docker images
+  565  docker tag my-image-name:0.0 bardroh/my-image-name:0.0
+  566  docker images
+  567  docker login
+  568  docker push bardroh/my-image-name:0.0
+  569  docker images
+  570  docker rmi my-image-name:0.0
+  571  docker rmi bardroh/my-image-name:0.0
+  572  docker run -it bardroh/my-image-name:0.0
+  573  docker ps -a
+  574  docker rm -f $(docker ps -a -q)
+  575  clear
+  576  docker ps -a
+  577  docker run -d --name myregistry -p 5000:5000 --restart=always registry:2.6
+  578  docker ps
+  579  docker logs myregistry
+  580  curl localhost:5000/v2
+  581  docker ps
+  582  docker container inspect myregistry
+  583  docker tag bardroh/my-image-name:0.0 172.17.0.2:5000/my-image-name:0.0
+  584  docker images
+  585  docker push 172.17.0.2:5000/my-image-name:0.0
+  586  cd /usr/lib/systemd/system
+  587  ls
+  588  vi docker.service
+  589  vi /etc/default/docker
+  590  systemctl daemon-reload
+  591  systemctl restart docker
+  592  docker ps -a
+  593  docker logs myregistry
+  594  docker push 172.17.0.2:5000/my-image-name:0
+  595  docker push 172.17.0.2:5000/my-image-name:0.0
+  596  docker image ls
+  597  docker rmi 172.17.0.2:5000/my-image-name:0.0
+  598  docker rmi bardroh/my-image-name:0.0
+  599  docker image ls
+  600  docker run -it 172.17.0.2:5000/my-image-name:0.0
+  601  clear
+  602  cd
+  603  ls
+  604  cd work/
+  605  ls
+  606  cd gsc-msa-2024-2nd/
+  607  ls
+  608  cd src
+  609  ls
+  610  cd exercise/
+  611  cd bardroh/
+  612  ls
+  613  cd day02
+  614  clear
+  615  ls
+  616  history > h3.txt
+  617  git add h3.txt 
+  618  git commit -m 'add h3.txt'
+  619  git pull
+  620  git push
+  621  clear
+  622  cd
+  623  docker ps -a
+  624  docker rm -f $(docker ps -a -q)
+  625  docker ps -a
+  626  mkdir dockerfile && cd dockerfile
+  627  echo test >> test.html
+  628  ls
+  629  cat test.html 
+  630  vi Dockerfile
+  631  docker build -t mybuild:0.0 .
+  632  docker images
+  633  docker run -d -p 80:80 --name myserver mybuild:0.0
+  634  docker ps
+  635  docker logs myserver
+  636  clear
+  637  cd ~/work/
+  638  ls
+  639  cd gsc-msa-2024-2nd/
+  640  ls
+  641  cd src
+  642  ls
+  643  cd exercise/
+  644  ls
+  645  cd bardroh/
+  646  ls
+  647  cd day02/
+  648  clear
+  649  ls
+  650  history > h4.txt
