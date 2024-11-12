@@ -1,0 +1,231 @@
+    1  whoami
+    2  mkdir ~/work
+    3  cd ~/work
+    4  ssh-keygen
+    5  ssh-keygen -t ed25519
+    6  ssh-keygen
+    7  cat ~/.ssh/id_rsa.pub
+    8  clear
+    9  git config --global user.name "Bard K. Roh"
+   10  git config --global user.email bardroh@weable.ai
+   11  git config --global --list
+   12  git clone git@github.com:weable-gsc/gsc-msa-2024-2nd.git
+   13  ls
+   14  cd gsc-msa-2024-2nd/
+   15  clear
+   16  ls
+   17  cd doc
+   18  ls
+   19  cd ..
+   20  ls
+   21  cd src
+   22  ls
+   23  cd exercise/
+   24  ls
+   25  cd bardroh/
+   26  ls
+   27  cd day01/
+   28  ls
+   29  history > h1.txt
+   30  ls
+   31  git add h1.txt 
+   32  git commit
+   33  git push
+   34  ckear
+   35  clear
+   36  cd ..
+   37  cd 
+   38  clear
+   39  ls
+   40  rm -rf work
+   41  clear
+   42  ls
+   43  mkdir ~/work
+   44  cd ~/work
+   45  ssh-keygen
+   46  cat ~/.ssh/id_rsa.pub
+   47  git config --global user.name "Bard K. Roh"
+   48  git config --global user.email bardroh@weable.ai
+   49  git config --global --list
+   50  clear
+   51  git clone git@github.com:weable-gsc/gsc-msa-2024-2nd.git
+   52  cd gsc-msa-2024-2nd/
+   53  ls
+   54  cd src
+   55  ls
+   56  cd exercise/
+   57  ls
+   58  cd bardroh/
+   59  ls
+   60  cd day01/
+   61  ls
+   62  history > h2.txt
+   63  ls 
+   64  git add h2.txt 
+   65  git commit
+   66  git push
+   67  history
+   68  clear
+   69  ls
+   70  history > h3.txt
+   71  ls
+   72  clear
+   73  git add h3.txt 
+   74  git commit
+   75  git commit -m "add h3.txt"
+   76  ls
+   77  rm h3.txt
+   78  ls
+   79  git checkout h3.txt
+   80  ls
+   81  vi h3.txt 
+   82  cat h3.txt 
+   83  git checkout h3.txt
+   84  vi h3.txt 
+   85  git push
+   86  git pull
+   87  pico h3.txt 
+   88  vi h3.txt 
+   89  clear
+   90  ls
+   91  mkdir new_folder
+   92  ls
+   93  cd new_folder/
+   94  ls
+   95  history > h4.txt
+   96  vi h4.txt 
+   97  cd ..
+   98  ls
+   99  rm -rf new_folder/
+  100  clear
+  101  ls
+  102  mkdir new_folder
+  103  ls
+  104  cd new_folder/
+  105  ls
+  106  history > h4.txt
+  107  ls
+  108  git add h4.txt 
+  109  git commit 
+  110  git push
+  111  git pull
+  112  git config pull.rebase false 
+  113  git pull
+  114  git push
+  115  clear
+  116  history > h5.txt
+  117  git add h5.txt 
+  118  git commit -m 'add h5.txt'
+  119  git pull
+  120  git push
+  121  clear
+  122  cat /etc/*release*
+  123  cd
+  124  ls
+  125  cat install-docker.sh
+  126  cat install-docker.sh | more
+  127  clear
+  128  sh install-docker.sh --dry-run
+  129  sudo sh install-docker.sh
+  130  clear
+  131  docker -v
+  132  docker ps
+  133  docker -v
+  134  docker run -it centos:7
+  135  docker pull ubuntu:20.04
+  136  docker image ls
+  137  docker images
+  138  clear
+  139  docker create -i -t --name myubuntu ubuntu:20.04
+  140  docker start myubuntu
+  141  docker ps
+  142  docker attach myubuntu
+  143  docker ps
+  144  docker attach myubuntu
+  145  docker ps
+  146  docker ps 
+  147  docker ps -a
+  148  docker run -i -t ubuntu:20.04 echo hello world!
+  149  docker ps
+  150  docker ps -a
+  151  clear
+  152  docker rename myubuntu renamed
+  153  docker ps -a
+  154  docker rename renamed myubuntu
+  155  docker ps -a
+  156  docker rm myubuntu
+  157  docker ps -a
+  158  docker rm -f  bold_khorana
+  159  docker container prune
+  160  docker ps -a -q
+  161  docker ps -a 
+  162  docker ps -a -q
+  163  clear
+  164  docker rm -f $(docker ps -a -q)
+  165  docker ps -a
+  166  cd work/
+  167  ls
+  168  cd gsc-msa-2024-2nd/
+  169  ls
+  170  cd src
+  171  ls
+  172  cd exercise/
+  173  ls
+  174  cd bardroh/
+  175  ls
+  176  cd day01/
+  177  ls
+  178  history > h4.txt
+  179  git add h4.txt 
+  180  git commit -m 'add h4.txt'
+  181  git pull
+  182  git push
+  183  clear
+  184  docker ps -a
+  185  docker images
+  186  docker run -i -t --name network_test ubuntu:14.04
+  187  clear
+  188  docker ps
+  189  docker run -it --name mywebserver -p 80:80 ubuntu:14.04
+  190  clear
+  191  docker ps -a
+  192  docker rm -f $(docker ps -a -q)
+  193  docker ps -a
+  194  docker run -d --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql:5.7
+  195  docker ps
+  196  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress --link wordpressdb:mysql -p 80:80 wordpress:5.6
+  197  clear
+  198  docker ps
+  199  docker rm -f $(docker ps -a -q)
+  200  docker ps -a
+  201  history
+  202  docker run -d --name wordpressdb -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress mysql:5.7
+  203  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress --link wordpressdb:mysql -p 80:80 wordpress:5.6
+  204  docker ps
+  205  clear
+  206  docker p
+  207  docker ps
+  208  docker rm -f $(docker ps -a -q)
+  209  docker run -d --name wordpressdb_hostvolume -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -v /home/wordpress_db:/var/lib/mysql mysql:5.7
+  210  docker logs wordpressdb_hostvolume
+  211  clear
+  212  ls
+  213  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress_hostvolume --link wordpressdb_hostvolume:mysql -p 80:80 wordpress:5.6
+  214  docker ps
+  215  docker logs wordpress_hostvolume
+  216  cklear
+  217  clear
+  218  docker ps
+  219  docker rm -f $(docker ps -a -q)
+  220  docker ps -a
+  221  ls /home/wordpress_db/
+  222  docker run -d --name wordpressdb_hostvolume -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=wordpress -v /home/wordpress_db:/var/lib/mysql mysql:5.7
+  223  docker ps
+  224  docker logs wordpressdb_hostvolume
+  225  docker run -d -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_PASSWORD=password --name wordpress_hostvolume --link wordpressdb_hostvolume:mysql -p 80:80 wordpress:5.6
+  226  clear
+  227  docker ps
+  228  docker logs wordpress_hostvolume
+  229  clear
+  230  ls
+  231  history > h5.txt
