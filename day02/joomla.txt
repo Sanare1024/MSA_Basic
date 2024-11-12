@@ -1,0 +1,15 @@
+docker run -d --name joomla_db \
+-e MYSQL_ROOT_PASSWORD=password \
+-e MYSQL_DATABASE=joomla_db \
+-v /home/joomla_db:/var/lib/mysql \
+mysql:5.7
+
+docker run -d --name joomla -p 80:80 \
+--link joomla_db:mysql \
+-e JOOMLA_DB_HOST=joomla_db \
+-e JOOMLA_DB_USER=root \
+-e JOOMLA_DB_PASSWORD=password \
+-e JOOMLA_DB_NAME=joomla_db \
+-v /home/joomla_web:/var/www/html \
+joomla:4.4
+
