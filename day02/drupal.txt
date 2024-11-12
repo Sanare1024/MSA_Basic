@@ -1,0 +1,16 @@
+docker run -d --name postgres-db \
+    -e POSTGRES_DB=drupal \
+    -e POSTGRES_USER=user \
+    -e POSTGRES_PASSWORD=pass \
+    -v /home/drupal_db:/var/lib/postgresql/data \
+postgres:12
+
+docker volume create drupal-sites
+docker run --rm -v drupal-sites:/temporary/sites drupal:9 cp -aRT /var/www/html/sites /temporary/sites
+
+docker run --name my-drupal -d -p 80:80 --link postgres-db:my-db \
+    -v drupal-modules:/var/www/html/modules \
+    -v drupal-profiles:/var/www/html/profiles \
+    -v drupal-sites:/var/www/html/sites \
+    -v drupal-themes:/var/www/html/themes \
+drupal:9
