@@ -1,0 +1,21 @@
+# docker로 볼륨을 붙여서 joomla + mysql을 실행한다(실습) -> 삭제 후 다시 시작시 재설치 하지 않음 확인
+  1  docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=joomla -v mysql_data:/var/lib/mysql mysql:5.7
+  2  docker run -d --name joomla -e JOOMLA_DB_HOST=mysql -e JOOMLA_DB_USER=root -e JOOMLA_DB_PASSWORD=password -e JOOMLA_DB_NAME=joomla -p 8080:80 --link mysql:mysql -v joomla_data:/var/www/html joomla
+  3  docker ps -a
+  4  docker stop joomla mysql
+  5  docker rm joomla mysql
+  6  docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=joomla -v mysql_data:/var/lib/mysql mysql:5.7
+  7  docker run -d --name joomla --link mysql:mysql -p 80:80 -v joomla_data:/var/www/html joomla
+  8  docker ps -a
+- mysql, joomla 컨테이너를 각각 실행 후 joomla와 mysql을 연결하여 종료하고 삭제해도 데이터는 volume에 보존되므로 재시작 시 재설치되지 않습니다.
+
+# docker로 볼륨을 붙여서 drupal + postgres를 실행한다(실습) -> 삭제 후 다시 시작시 재설치 하지 않음 확인
+  1  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:12
+  2  docker run -d --name drupal -e DRUPAL_DB_HOST=postgres:5432 -e DRUPAL_DB_USER=postgres -e DRUPAL_DB_PASSWORD=password -e DRUPAL_DB_NAME=drupal -p 8081:80 --link postgres:postgres -v drupal_data:/var/www/html drupal
+  3  docker ps -a
+  4  docker stop drupal postgres
+  5  docker rm postgres drupal
+  6  docker run -d --name postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=drupal -v postgres_data:/var/lib/postgresql/data postgres:alpine
+  7  docker run -d --name drupal --link postgres:postgres -p 8080:80 -v drupal_data:/var/www/html drupal
+  8  docker ps -a
+- postgres, drupal 컨테이너를 각각 실행 후 postgres와 drupal을 연결하여 종료하고 삭제해도 데이터는 volume에 보존되므로 재시작 시 재설치되지 않습니다.
